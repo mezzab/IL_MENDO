@@ -13,6 +13,7 @@ using IL_MENDO.ABM_Camion;
 using IL_MENDO.Cargar_Viaje;
 using IL_MENDO.ABM_Cliente;
 using IL_MENDO.ABM_Tarifas;
+using IL_MENDO.Listados;
 
 namespace IL_MENDO
 {
@@ -65,9 +66,9 @@ namespace IL_MENDO
         {
 
             this.Visible = false;
-            Form frm = new tarifas();
+            Form frm = new Listado();
             frm.ShowDialog();
-            frm = (tarifas)this.ActiveMdiChild;
+            frm = (Listado)this.ActiveMdiChild;
         }
     }
 }

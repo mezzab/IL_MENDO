@@ -45,90 +45,90 @@
             // 
             // abm_chofer
             // 
-            resources.ApplyResources(this.abm_chofer, "abm_chofer");
             this.abm_chofer.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.abm_chofer, "abm_chofer");
             this.abm_chofer.Name = "abm_chofer";
             this.abm_chofer.UseVisualStyleBackColor = false;
             this.abm_chofer.Click += new System.EventHandler(this.abm_chofer_Click);
             // 
             // abm_camion
             // 
-            resources.ApplyResources(this.abm_camion, "abm_camion");
             this.abm_camion.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.abm_camion, "abm_camion");
             this.abm_camion.Name = "abm_camion";
             this.abm_camion.UseVisualStyleBackColor = false;
             this.abm_camion.Click += new System.EventHandler(this.button1_Click);
             // 
             // abm_estacion
             // 
-            resources.ApplyResources(this.abm_estacion, "abm_estacion");
             this.abm_estacion.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.abm_estacion, "abm_estacion");
             this.abm_estacion.Name = "abm_estacion";
             this.abm_estacion.UseVisualStyleBackColor = false;
             this.abm_estacion.Click += new System.EventHandler(this.abm_estacion_Click);
             // 
             // abm_cliente
             // 
-            resources.ApplyResources(this.abm_cliente, "abm_cliente");
             this.abm_cliente.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.abm_cliente, "abm_cliente");
             this.abm_cliente.Name = "abm_cliente";
             this.abm_cliente.UseVisualStyleBackColor = false;
             this.abm_cliente.Click += new System.EventHandler(this.abm_cliente_Click);
             // 
             // nuevo_tramo
             // 
-            resources.ApplyResources(this.nuevo_tramo, "nuevo_tramo");
             this.nuevo_tramo.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.nuevo_tramo, "nuevo_tramo");
             this.nuevo_tramo.Name = "nuevo_tramo";
             this.nuevo_tramo.UseVisualStyleBackColor = false;
             // 
             // abm_lugares
             // 
-            resources.ApplyResources(this.abm_lugares, "abm_lugares");
             this.abm_lugares.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.abm_lugares, "abm_lugares");
             this.abm_lugares.Name = "abm_lugares";
             this.abm_lugares.UseVisualStyleBackColor = false;
             // 
             // nuevo_viaje
             // 
-            resources.ApplyResources(this.nuevo_viaje, "nuevo_viaje");
             this.nuevo_viaje.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.nuevo_viaje, "nuevo_viaje");
             this.nuevo_viaje.Name = "nuevo_viaje";
             this.nuevo_viaje.UseVisualStyleBackColor = false;
             this.nuevo_viaje.Click += new System.EventHandler(this.nuevo_viaje_Click);
             // 
             // liquidar
             // 
-            resources.ApplyResources(this.liquidar, "liquidar");
             this.liquidar.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.liquidar, "liquidar");
             this.liquidar.Name = "liquidar";
             this.liquidar.UseVisualStyleBackColor = false;
             // 
             // adelanto_chofer
             // 
-            resources.ApplyResources(this.adelanto_chofer, "adelanto_chofer");
             this.adelanto_chofer.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.adelanto_chofer, "adelanto_chofer");
             this.adelanto_chofer.Name = "adelanto_chofer";
             this.adelanto_chofer.UseVisualStyleBackColor = false;
             // 
             // carga_gasto
             // 
-            resources.ApplyResources(this.carga_gasto, "carga_gasto");
             this.carga_gasto.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.carga_gasto, "carga_gasto");
             this.carga_gasto.Name = "carga_gasto";
             this.carga_gasto.UseVisualStyleBackColor = false;
             // 
             // carga_gasoil
             // 
-            resources.ApplyResources(this.carga_gasoil, "carga_gasoil");
             this.carga_gasoil.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.carga_gasoil, "carga_gasoil");
             this.carga_gasoil.Name = "carga_gasoil";
             this.carga_gasoil.UseVisualStyleBackColor = false;
             // 
             // pago_cliente
             // 
-            resources.ApplyResources(this.pago_cliente, "pago_cliente");
             this.pago_cliente.BackColor = System.Drawing.SystemColors.Menu;
+            resources.ApplyResources(this.pago_cliente, "pago_cliente");
             this.pago_cliente.Name = "pago_cliente";
             this.pago_cliente.UseVisualStyleBackColor = false;
             // 

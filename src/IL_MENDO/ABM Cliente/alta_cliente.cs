@@ -51,6 +51,17 @@ namespace IL_MENDO.ABM_Cliente
                 }
                 if (elNombreYaEsta() == false)
                 {
+
+                    string aux0 = tarifaRepartos.Text;
+                    string aux1 = aux0.ToString().Replace(",", ".");
+
+                    
+                    //Esto sirve por si ingresa una coma por un numero. 
+                    string aux2 = importeMinimo.Text;
+                    string aux3 = aux2.ToString().Replace(",", ".");
+
+                 
+
                     string sql = " INSERT INTO [BD].[CLIENTES]" +
                                 " ([CLIE_DESCRIPCION]" +
                                 " ,[CLIE_NOMBRE]" +
@@ -60,9 +71,9 @@ namespace IL_MENDO.ABM_Cliente
                                 " VALUES" +
                                 " ('" + descripcion.Text + "'" +
                                  " ,'" + nombre.Text + "'" +
-                                " ,'" + tarifaRepartos.Text + "'" +
+                                " ,'" + aux1 + "'" +
                                 " ,(SELECT TARI_ID FROM BD.TARIFAS WHERE TARI_NOMBRE = '" + tarifas.Text + "' )" +
-                                " ,'" + importeMinimo.Text + "')";
+                                " ,'" + aux3 + "')";
 
                     Query qry = new Query(sql);
                     qry.pComando = sql;
