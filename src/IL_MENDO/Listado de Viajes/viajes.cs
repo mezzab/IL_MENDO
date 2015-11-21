@@ -7,18 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IL_MENDO.Listados;
 
-namespace IL_MENDO.ABM_Tarifas
+namespace IL_MENDO.Listado_de_Viajes
 {
-    public partial class tarifas : Form
+    public partial class viajes : Form
     {
-        public tarifas()
+        public viajes()
         {
             InitializeComponent();
         }
 
+        private void viajes_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
+
             this.Visible = false;
             Form frm = new Inicio();
             frm.ShowDialog();
@@ -27,11 +34,20 @@ namespace IL_MENDO.ABM_Tarifas
 
         private void abm_chofer_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Form frm = new alta_tarifa();
-            frm.ShowDialog();
-            frm = (alta_tarifa)this.ActiveMdiChild;
 
+            this.Visible = false;
+            Form frm = new Listado_Todos();
+            frm.ShowDialog();
+            frm = (Listado_Todos)this.ActiveMdiChild;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.Visible = false;
+            Form frm = new Listado();
+            frm.ShowDialog();
+            frm = (Listado)this.ActiveMdiChild;
         }
     }
 }

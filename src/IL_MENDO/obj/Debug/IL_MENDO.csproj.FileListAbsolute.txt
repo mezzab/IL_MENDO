@@ -13,8 +13,14 @@ C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Camion.camion
 C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Chofer.chofer.resources
 C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Cliente.alta_cliente.resources
 C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Cliente.cliente.resources
-C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Tarifas.alta_tarifa.resources
-C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Tarifas.tarifas.resources
 C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Cliente.modificar_cliente.resources
 C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.ABM_Chofer.modificar_chofer.resources
 C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.Cargar_Viaje.cargaDatos.resources
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\bin\Debug\af\IL_MENDO.resources.dll
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.Inicio.af.resources
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\af\IL_MENDO.resources.dll
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.Listados.Listado.resources
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.Nuevo_Adelanto.nuevo_adelanto.resources
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.Nuevo_Gasto.nuevo_gasto.resources
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.Listado_de_Viajes.Listado_Todos.resources
+C:\Users\Marc\Desktop\IL MENDO\src\IL_MENDO\obj\Debug\IL_MENDO.Listado_de_Viajes.viajes.resources

@@ -103,7 +103,8 @@ namespace IL_MENDO.ABM_Cliente
             }
             if (TARIFALDNOMBRE != tarifas.Text)
             {
-                string qry = "update BD.CLIENTES " +
+
+                 string qry = "update BD.CLIENTES " +
                           " set CLIE_TARIFA_LARGA_DIST_ID = (SELECT TARI_ID FROM BD.TARIFAS where TARI_NOMBRE = '" + tarifas.Text + "')" +
                           " where CLIE_ID = " + IDCLIENTE;
 
@@ -123,8 +124,14 @@ namespace IL_MENDO.ABM_Cliente
             }
             if (TARIFAREPARTOS != tarifaRepartos.Text)
             {
+
+                string aux0 = tarifaRepartos.Text;
+                string aux1 = aux0.ToString().Replace(",", ".");
+
+
+
                 string qry = "update BD.CLIENTES " +
-                          " set CLIE_TARIFA = '" + tarifaRepartos.Text + "'" +
+                          " set CLIE_TARIFA = '" + aux1 + "'" +
                           " where CLIE_ID = " + IDCLIENTE;
 
                 new Query(qry).Ejecutar();
@@ -133,8 +140,12 @@ namespace IL_MENDO.ABM_Cliente
             }
             if (IMPORTEMINIMO != importeMinimo.Text)
             {
+
+                string aux2 = importeMinimo.Text;
+                string aux3 = aux2.ToString().Replace(",", ".");
+
                 string qry = "update BD.CLIENTES " +
-                          " set CLIE_IMPORTE_MIN = '" + importeMinimo.Text + "'" +
+                          " set CLIE_IMPORTE_MIN = '" + aux3 + "'" +
                           " where CLIE_ID = " + IDCLIENTE;
 
                 new Query(qry).Ejecutar();
@@ -255,6 +266,11 @@ namespace IL_MENDO.ABM_Cliente
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tarifaRepartos_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -76,6 +76,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.abm_chofer);
             this.Controls.Add(this.button2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "camion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Camion";

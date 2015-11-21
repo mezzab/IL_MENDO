@@ -93,18 +93,6 @@
     <Compile Include="ABM Cliente\modificar_cliente.Designer.cs">
       <DependentUpon>modificar_cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABM Tarifas\alta_tarifa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ABM Tarifas\alta_tarifa.Designer.cs">
-      <DependentUpon>alta_tarifa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ABM Tarifas\tarifas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ABM Tarifas\tarifas.Designer.cs">
-      <DependentUpon>tarifas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cargar Viaje\cargaDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,11 +106,35 @@
     <Compile Include="Inicio\Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Listados\listado.cs">
+    <Compile Include="Listado de Viajes\listado_todos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listados\listado.Designer.cs">
-      <DependentUpon>listado.cs</DependentUpon>
+    <Compile Include="Listado de Viajes\listado_todos.Designer.cs">
+      <DependentUpon>listado_todos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado de Viajes\listados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado de Viajes\listados.Designer.cs">
+      <DependentUpon>listados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Listado de Viajes\viajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado de Viajes\viajes.Designer.cs">
+      <DependentUpon>viajes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo Adelanto\nuevo_adelanto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo Adelanto\nuevo_adelanto.Designer.cs">
+      <DependentUpon>nuevo_adelanto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo Gasto\nuevo_gasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo Gasto\nuevo_gasto.Designer.cs">
+      <DependentUpon>nuevo_gasto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,12 +163,6 @@
     <EmbeddedResource Include="ABM Cliente\modificar_cliente.resx">
       <DependentUpon>modificar_cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABM Tarifas\alta_tarifa.resx">
-      <DependentUpon>alta_tarifa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ABM Tarifas\tarifas.resx">
-      <DependentUpon>tarifas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cargar Viaje\cargaDatos.resx">
       <DependentUpon>cargaDatos.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,8 +172,20 @@
     <EmbeddedResource Include="Inicio\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listados\listado.resx">
-      <DependentUpon>listado.cs</DependentUpon>
+    <EmbeddedResource Include="Listado de Viajes\listado_todos.resx">
+      <DependentUpon>listado_todos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado de Viajes\listados.resx">
+      <DependentUpon>listados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado de Viajes\viajes.resx">
+      <DependentUpon>viajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo Adelanto\nuevo_adelanto.resx">
+      <DependentUpon>nuevo_adelanto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo Gasto\nuevo_gasto.resx">
+      <DependentUpon>nuevo_gasto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

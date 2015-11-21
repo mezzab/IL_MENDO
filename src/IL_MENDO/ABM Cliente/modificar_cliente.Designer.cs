@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modificar_cliente));
             this.button2 = new System.Windows.Forms.Button();
             this.guardarNuevosDatos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.clientes = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +160,7 @@
             this.tarifaRepartos.Name = "tarifaRepartos";
             this.tarifaRepartos.Size = new System.Drawing.Size(142, 27);
             this.tarifaRepartos.TabIndex = 5;
+            this.tarifaRepartos.TextChanged += new System.EventHandler(this.tarifaRepartos_TextChanged);
             // 
             // label7
             // 
@@ -226,29 +227,18 @@
             this.label3.Text = "Seleccione un cliente:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(195, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(423, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "CUIDADO: Si vas a ingresar un numero decimal, acordate de usar el PUNTO, y NO la " +
-    "COMA.";
-            // 
             // modificar_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(816, 516);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.guardarNuevosDatos);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.clientes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modificar_cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Cliente";
@@ -278,7 +268,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox clientes;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
 
     }
 }

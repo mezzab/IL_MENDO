@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cargaDatos));
             this.choferes = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.kilometros = new System.Windows.Forms.TextBox();
@@ -301,9 +302,10 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.liquidar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cargaDatos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cargar Nuevo Reparto";
+            this.Text = "Carga de nuevo viaje";
             this.Load += new System.EventHandler(this.reparto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

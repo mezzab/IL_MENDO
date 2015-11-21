@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(chofer));
             this.button1 = new System.Windows.Forms.Button();
             this.abm_chofer = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -88,9 +89,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.abm_chofer);
             this.Controls.Add(this.button2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "chofer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "chofer";
+            this.Text = "ABM Choferes";
             this.Load += new System.EventHandler(this.chofer_Load);
             this.ResumeLayout(false);
 

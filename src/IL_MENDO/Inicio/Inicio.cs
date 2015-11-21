@@ -12,8 +12,7 @@ using IL_MENDO.ABM_Chofer;
 using IL_MENDO.ABM_Camion;
 using IL_MENDO.Cargar_Viaje;
 using IL_MENDO.ABM_Cliente;
-using IL_MENDO.ABM_Tarifas;
-using IL_MENDO.Listados;
+using IL_MENDO.Listado_de_Viajes;
 
 namespace IL_MENDO
 {
@@ -66,9 +65,9 @@ namespace IL_MENDO
         {
 
             this.Visible = false;
-            Form frm = new Listado();
+            viajes frm = new viajes();
             frm.ShowDialog();
-            frm = (Listado)this.ActiveMdiChild;
+            frm = (viajes)this.ActiveMdiChild;
         }
     }
 }

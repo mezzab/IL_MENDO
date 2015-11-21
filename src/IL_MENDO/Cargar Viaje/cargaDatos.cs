@@ -22,6 +22,8 @@ namespace IL_MENDO.Cargar_Viaje
            public static string CHOFER_ID;
            public static string REMITO_ID;
            public static string TIPO;
+           public static string CARGA_ID;
+           public static string DESCARGA_ID;
 
         public cargaDatos()
         {
@@ -127,6 +129,7 @@ namespace IL_MENDO.Cargar_Viaje
             if (controlarQueEsteTodoCompletado()) //TODO:
             {
                 buscarIDs();
+                cagarLugares();
 
                 string ax = kilometros.Text;
                 decimal kilo = Convert.ToDecimal(ax);
@@ -160,6 +163,8 @@ namespace IL_MENDO.Cargar_Viaje
                     {
                         string tot = total.ToString().Replace(",", ".");
 
+
+
                         string sqlt = "INSERT INTO [BD].[VIAJES] " +
                                    "([VIAJ_CLIENTE_ID] " +
                                    ",[VIAJ_CHOFER_ID] " +
@@ -169,6 +174,8 @@ namespace IL_MENDO.Cargar_Viaje
                                    ",[VIAJ_FECHA] " +
                                    ",[VIAJ_TONELADAS] " +
                                    ",[VIAJ_IMPORTE] " +
+                                   ",[VIAJ_CARGA_ID] " +
+                                   ",[VIAJ_DESCARGA_ID] " +
                                    ",[VIAJ_TIPO]) " +
                              "VALUES " +
                                    "( " + CLIENTE_ID +
@@ -179,6 +186,8 @@ namespace IL_MENDO.Cargar_Viaje
                                    ", '" + aux + "'" +
                                    " , " + ton+
                                    " , " +tot +
+                                   " , " +  CARGA_ID +
+                                   " , " + DESCARGA_ID +
                                    " , '" + TIPO + "')";
 
                         Query qryt = new Query(sqlt);
@@ -201,6 +210,8 @@ namespace IL_MENDO.Cargar_Viaje
                                    ",[VIAJ_FECHA] " +
                                    ",[VIAJ_TONELADAS] " +
                                    ",[VIAJ_IMPORTE] " +
+                                   ",[VIAJ_CARGA_ID] " +
+                                   ",[VIAJ_DESCARGA_ID] " +
                                    ",[VIAJ_TIPO]) " +
                              "VALUES " +
                                    "( " + CLIENTE_ID +
@@ -211,6 +222,8 @@ namespace IL_MENDO.Cargar_Viaje
                                    ", '" + aux + "'" +
                                    " , " + ton +
                                    " , " + IMP  +
+                                   " , " + CARGA_ID +
+                                   " , " + DESCARGA_ID +
                                    " , '" + TIPO + "')";
 
                         Query qryt = new Query(sqlt);
@@ -253,6 +266,8 @@ namespace IL_MENDO.Cargar_Viaje
                                ",[VIAJ_FECHA] " +
                                ",[VIAJ_TONELADAS] " +
                                ",[VIAJ_IMPORTE] " +
+                                ",[VIAJ_CARGA_ID] " +
+                                ",[VIAJ_DESCARGA_ID] " +
                                ",[VIAJ_TIPO]) " +
                          "VALUES " +
                                "( " + CLIENTE_ID +
@@ -263,6 +278,8 @@ namespace IL_MENDO.Cargar_Viaje
                                ", '" + aux + "'" +
                                " , " + ton +
                                " , " + TOT +
+                                " , " + CARGA_ID +
+                                " , " + DESCARGA_ID +
                                " , '" + TIPO + "')";
 
                     Query qryt = new Query(sqlt);
@@ -277,37 +294,62 @@ namespace IL_MENDO.Cargar_Viaje
 
         }
 
-        public void ConvertStringDecimal(string stringVal)
+        public void cagarLugares()
+        {   
+            if(existeLugar(carga.Text) == false)
+            {
+                string cargaq = "INSERT INTO [BD].[CIUDADES] ([CIUD_DETALLE]) VALUES( '" + carga.Text + "')" ;
+
+                Query qryT = new Query(cargaq);
+                qryT.pComando = cargaq;
+                qryT.Ejecutar();
+
+
+                string sql = "SELECT CIUD_ID FROM BD.CIUDADES WHERE CIUD_DETALLE = '" + carga.Text + "'";
+                Query qry = new Query(sql);
+                CARGA_ID = qry.ObtenerUnicoCampo().ToString();
+            }
+            if (existeLugar(carga.Text))
+            {
+                CARGA_ID = obtenerID(carga.Text);
+            }
+            ////
+            if (existeLugar(descarga.Text) == false)
+            {
+                string descargaq = "INSERT INTO [BD].[CIUDADES] ([CIUD_DETALLE]) VALUES( '" + descarga.Text + "')";
+
+                Query qryT1 = new Query(descargaq);
+                qryT1.pComando = descargaq;
+                qryT1.Ejecutar();
+
+                string sql1 = "SELECT CIUD_ID FROM BD.CIUDADES WHERE CIUD_DETALLE = '" + descarga.Text + "'";
+                Query qry1 = new Query(sql1);
+                DESCARGA_ID = qry1.ObtenerUnicoCampo().ToString();
+            }
+            if (existeLugar(descarga.Text))
+            {
+                DESCARGA_ID = obtenerID(descarga.Text);
+            }
+        }
+
+        public bool existeLugar(string nombre)
         {
-            decimal decimalVal = 0;
+            string sql1 = "SELECT CIUD_ID FROM BD.CIUDADES WHERE CIUD_DETALLE = '" + nombre + "'";
+            Query qry1 = new Query(sql1);
+            object mmm = qry1.ObtenerUnicoCampo();
 
-            try
-            {
-                decimalVal = System.Convert.ToDecimal(stringVal);
-                System.Console.WriteLine(
-                    "The string as a decimal is {0}.", decimalVal);
-            }
-            catch (System.OverflowException)
-            {
-                System.Console.WriteLine(
-                    "The conversion from string to decimal overflowed.");
-            }
-            catch (System.FormatException)
-            {
-                System.Console.WriteLine(
-                    "The string is not formatted as a decimal.");
-            }
-            catch (System.ArgumentNullException)
-            {
-                System.Console.WriteLine(
-                    "The string is null.");
-            }
+            return (mmm != null);
+        }
 
-            // Decimal to string conversion will not overflow.
-            stringVal = System.Convert.ToString(decimalVal);
-            System.Console.WriteLine(
-                "The decimal as a string is {0}.", stringVal);
-        }	
+        private string obtenerID(string nombre)
+        {
+            string sql1 = "SELECT CIUD_ID FROM BD.CIUDADES WHERE CIUD_DETALLE = '" + nombre + "'";
+            Query qry1 = new Query(sql1);
+            string xxx = qry1.ObtenerUnicoCampo().ToString();
+
+            return (xxx);
+        }
+
 
         private void buscarIDs()
         {

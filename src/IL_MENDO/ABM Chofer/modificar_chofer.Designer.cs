@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(modificar_chofer));
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -174,9 +175,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Nuevo_Camion);
             this.Controls.Add(this.button2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modificar_chofer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "64";
+            this.Text = "Modificar un chofer";
             this.Load += new System.EventHandler(this.modificar_chofer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
